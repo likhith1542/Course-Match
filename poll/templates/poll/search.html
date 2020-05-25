@@ -1,0 +1,44 @@
+{% extends "poll/base.html" %}
+
+{% block title %}Search{% endblock %}
+
+{% block main %}
+
+<form method="POST" action="/search/" >
+    {% csrf_token %}
+    <h1><label>Search: </label></h1>
+    <input type="text" name="srh" class="form-control" placeholder="Enter Registration Number">
+    <br><button type="submit" class="btn btn-success" style="border-radius: 3px;">Find!</button>
+</form><br><br>
+<div>
+    {% if messages %}
+    <ul class="messages" >
+        {% for k in messages %}
+        <li style="color: red">{{ k }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div><br>
+<div>
+    {% if sr %}
+    {% for k in sr %}
+    <p>Registration Number:  {{ k.question }}</p>
+    <p>Courses            :  <ul>
+        <li>{{ k.option_one }}</li>
+        <li>{{ k.option_two }}</li>
+        <li>{{ k.option_three }}</li>
+        <li>{{ k.option_four }}</li>
+        <li>{{ k.option_five }}</li>
+        <li>{{ k.option_six }}</li>
+        <li>{{ k.option_seven }}</li>
+        <li>{{ k.option_eight }}</li>
+        <li>{{ k.option_nine }}</li>
+        <li>{{ k.option_ten }}</li>
+    </ul>
+</p>
+
+    {% endfor %}
+    {% endif %}
+</div>
+
+{% endblock %}

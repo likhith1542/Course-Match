@@ -1,0 +1,85 @@
+{% extends "poll/base.html" %}
+{% load widget_tweaks %}
+{% block title %}Add{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="kanel panel-default">
+            <div class="panel-heading">
+                <center><h6 class="panel-title">Add your details</h6></center>
+            </div>
+            <div>
+                <h6>
+                    <span style="color: #ff0000">*</span>
+                    Add only after finalising
+                </h6>
+                <h6>
+                    <span style="color: #ff0000">*</span>
+                    Give your own registration number.because id is unique
+                </h6>
+                <h6>
+                    <span style="color: #ff0000">*</span>
+                    If there are empty places fill it with 'None'
+                </h6>
+            </div>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="panel-body">
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="question">Registration Number</label>
+                                {% render_field form.question class="form-control" placeholder="Enter Registration Number" %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="option1">Course 1</label>
+                                {% render_field form.option_one class="form-control" placeholder="Enter Course1" %}
+                                <label for="option4">Course 4</label>
+                                {% render_field form.option_four class="form-control" placeholder="Enter Course4" %}
+                                <label for="option7">Course 7</label>
+                                {% render_field form.option_seven class="form-control" placeholder="Enter Course7" %}
+                                <label for="option10">Course 10</label>
+                                {% render_field form.option_ten class="form-control" placeholder="Enter Course10" %}
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="option2">Course 2</label>
+                                {% render_field form.option_two class="form-control" placeholder="Enter Course2" %}
+                                <label for="option5">Course 5</label>
+                                {% render_field form.option_five class="form-control" placeholder="Enter Course5" %}
+                                <label for="option8">Course 8</label>
+                                {% render_field form.option_eight class="form-control" placeholder="Enter Course8" %}
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="option3">Course 3</label>
+                                {% render_field form.option_three class="form-control" placeholder="Enter Course3" %}
+                                <label for="option6">Course 6</label>
+                                {% render_field form.option_six class="form-control" placeholder="Enter Course6" %}
+                                <label for="option9">Course 9</label>
+                                {% render_field form.option_nine class="form-control" placeholder="Enter Course9" %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <button type="submit" class="btn btn-info">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

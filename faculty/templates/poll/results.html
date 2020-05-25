@@ -1,0 +1,82 @@
+{% extends "poll/base2.html" %}
+
+{% block title %}Results{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Poll Result</h3>
+            </div>
+            <div class="panel-body">
+                <h3>{{ poll.question }}</h3>
+            </div>
+            <table>
+                <tr>
+                    <th>Faculty Name</th>
+                    <th>Number of votes</th>
+                </tr>
+                <tr>
+                    <th>{{ poll.option_one }}</th>
+                    <th>{{ poll.option_one_count }}</th>
+                </tr>
+                <tr>
+                    <th>{{ poll.option_two }}</th>
+                    <th>{{ poll.option_two_count }}</th>
+                </tr>
+                <tr>
+                    <th>{{ poll.option_three }}</th>
+                    <th>{{ poll.option_three_count }}</th>
+                </tr>
+                <tr>
+                    <th>{{ poll.option_four }}</th>
+                    <th>{{ poll.option_four_count }}</th>
+                </tr>
+                <tr>
+                    <th>{{ poll.option_five }}</th>
+                    <th>{{ poll.option_five_count }}</th>
+                </tr>
+                <tr>
+                    <th>{{ poll.option_six }}</th>
+                    <th>{{ poll.option_six_count }}</th>
+                </tr>
+                <tr>
+                    <th>{{ poll.option_seven }}</th>
+                    <th>{{ poll.option_seven_count }}</th>
+                </tr>
+                <tr>
+                    <th>{{ poll.option_eight }}</th>
+                    <th>{{ poll.option_eight_count }}</th>
+                </tr>
+                <tr>
+                    <th>{{ poll.option_nine }}</th>
+                    <th>{{ poll.option_nine_count }}</th>
+                </tr>
+                <tr>
+                    <th>{{ poll.option_ten }}</th>
+                    <th>{{ poll.option_ten_count }}</th>
+                </tr>
+                
+            </table>
+            <!-- <ul class="list-group">
+                <li class="list-group-item">{{ poll.option_one }} &mdash; <strong>{{ poll.option_one_count }}</strong></li>
+                <li class="list-group-item">{{ poll.option_two }} &mdash; <strong>{{ poll.option_two_count }}</strong></li>
+                <li class="list-group-item">{{ poll.option_three }} &mdash; <strong>{{ poll.option_three_count }}</strong></li>
+                <li class="list-group-item">{{ poll.option_four }} &mdash; <strong>{{ poll.option_four_count }}</strong></li>
+                <li class="list-group-item">{{ poll.option_five }} &mdash; <strong>{{ poll.option_five_count }}</strong></li>
+                <li class="list-group-item">{{ poll.option_six }} &mdash; <strong>{{ poll.option_six_count }}</strong></li>
+                <li class="list-group-item">{{ poll.option_seven }} &mdash; <strong>{{ poll.option_seven_count }}</strong></li>
+                <li class="list-group-item">{{ poll.option_eight }} &mdash; <strong>{{ poll.option_eight_count }}</strong></li>
+                <li class="list-group-item">{{ poll.option_nine }} &mdash; <strong>{{ poll.option_nine_count }}</strong></li>
+                <li class="list-group-item">{{ poll.option_ten }} &mdash; <strong>{{ poll.option_ten_count }}</strong></li>
+            </ul>
+
+            <div class="panel-footer">
+                Total &mdash; <strong>{{ poll.total }}</strong>
+            </div> -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}
