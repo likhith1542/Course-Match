@@ -2,6 +2,8 @@
 
 Course Match is a web application developed using "Django" framework.It helps us to know about faculty and what courses your friends and crush are going to take.
 
+An extension for previous project [Facultypoll](https://github.com/likhith1542/VITAP-facultypoll)
+
 # How it works
 * In add section,you have to add courses you are going to take
 * In search section,search what your friends and crush are going to take
